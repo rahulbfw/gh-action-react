@@ -1,0 +1,8 @@
+name: assessment workflow
+on: issues
+jobs:
+  onIssue:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Issue has been raised
+        run:  echo "${{ toJSON(github.event) }}"
