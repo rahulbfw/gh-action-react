@@ -4,5 +4,13 @@ jobs:
   info:
     runs-on: ubuntu-latest
     steps: 
-      - name: Print op object
-        run: echo "${{ toJSON(github) }}"
+      - name: python func
+        run: |
+          def func(x, y):
+            return (x + y)
+          x = 6
+          y = 7
+          func(x, y)
+      - name: script completed
+        run: print("Done")
+
