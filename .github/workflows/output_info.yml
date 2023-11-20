@@ -7,7 +7,8 @@ jobs:
       - name: python func
         run: |
           def func(x, y):
-            return (x + y)
+            res = x + y
+            return res
           x = 6
           y = 7
           func(x, y)
