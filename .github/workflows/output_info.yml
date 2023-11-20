@@ -4,14 +4,15 @@ jobs:
   info:
     runs-on: ubuntu-latest
     steps: 
-      - name: python func
+      - name: Run Python Script
         run: |
+          python -c '
           def func(x, y):
-            res = x + y
-            return res
+              res = x + y
+              return res
           x = 6
           y = 7
-          func(x, y)
-      - name: script completed
-        run: print("Done")
-
+          result = func(x, y)
+          print("Result:", result)'
+      - name: Script Completed
+        run: echo "Done"
